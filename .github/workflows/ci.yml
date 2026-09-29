@@ -21,6 +21,6 @@ jobs:
       - run: pip install -e ".[dev]"
       - run: python -m compileall -q src tests examples
       - run: ruff check src tests examples
-      - run: pytest -q
+      - run: pytest -q tests
       - name: End-to-end Lagrangian relaxation smoke test
         run: python -m lagrangian_uc --iterations 12 > /tmp/lagrangian_uc.json
