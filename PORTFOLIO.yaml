@@ -1,0 +1,15 @@
+schema_version: 1
+repository: energy-systems-optimization
+role: umbrella
+axis: application
+area: energy
+status: active
+owner: jorsacademy
+projects:
+  - electric-bus-charging-fleet-planning-optimization
+  - industrial-energy-management-sac
+  - vogel-transportation-power-distribution-optimizer
+conventions:
+  provenance_records: true
+  reproducibility_expected: true
+  benchmark_assumptions_documented: true
