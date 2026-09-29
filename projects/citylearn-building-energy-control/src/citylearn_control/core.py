@@ -30,16 +30,16 @@ def simulate(
         raise ValueError("load, price and action must share shape")
     soc=float(initial_soc)
     grid=[]
-    for l,a in zip(demand,control,strict=True):
+    for load_t,a in zip(demand,control,strict=True):
         p=float(np.clip(a,-battery.max_power,battery.max_power))
         if p >= 0:
             charge=min(p,(battery.capacity-soc)/battery.efficiency)
             soc += battery.efficiency*charge
-            grid.append(float(l+charge))
+            grid.append(float(load_t+charge))
         else:
             discharge=min(-p,soc*battery.efficiency)
             soc -= discharge/battery.efficiency
-            grid.append(float(max(l-discharge,0.0)))
+            grid.append(float(max(load_t-discharge,0.0)))
     g=np.asarray(grid)
     return {
         "cost":float(np.sum(g*tariff)),
