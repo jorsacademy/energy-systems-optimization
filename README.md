@@ -5,6 +5,10 @@
 
 This repository is the primary umbrella repository for this Jors Academy research area. Related projects have been consolidated under `projects/` so the methods, implementations, experiments, and case studies can be maintained and explored from one place.
 
+### Native flagship
+
+The repository root contains the actively maintained **thermal unit-commitment Lagrangian-relaxation benchmark** described below. The entries under `projects/` are consolidated companion projects.
+
 ### Included projects
 
 - [`electric-bus-charging-fleet-planning-optimization`](projects/electric-bus-charging-fleet-planning-optimization/)
