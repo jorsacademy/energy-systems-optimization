@@ -14,3 +14,6 @@ citylearn=["citylearn"]
 
 [tool.setuptools.packages.find]
 where=["src"]
+
+[tool.ruff.lint.isort]
+known-first-party=["citylearn_control"]
